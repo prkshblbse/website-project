@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    padding: 25px 8%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #3baeff;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    position: relative;
+}
+
+.socials {
+    position: absolute;
+    left: 40px;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.socials a {
+    color: #888;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.socials a:hover {
+    color: #3baeff;
+}
+
+.content {
+    max-width: 500px;
+}
+
+.content h3 {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.content h3 span {
+    color: #3baeff;
+}
+
+.content h1 {
+    font-size: 55px;
+    font-weight: 700;
+    color: #3baeff;
+}
+
+.content p {
+    margin: 15px 0 30px;
+    color: #ccc;
+    line-height: 1.7;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.primary {
+    background: #3baeff;
+    color: #000;
+}
+
+.primary:hover {
+    background: #1d6dbd;
+}
+
+.secondary {
+    border: 2px solid #3baeff;
+    color: #3baeff;
+}
+
+.secondary:hover {
+    background: #3baeff;
+    color: #000;
+}
+
+.photo-container {
+    position: relative;
+}
+
+.ring {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0 0 35px #3baeff, 0 0 90px #1d6dbd inset;
+    position: absolute;
+    z-index: 1;
+}
+
+.photo-container img {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    object-fit: cover;
+}
+
+/* About Section */
+
+.about-section {
+    padding: 80px 8%;
+}
+
+.about-section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #3baeff;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #3baeff;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.about-text h2:first-child {
+    margin-top: 0;
+}
+
+.about-text p {
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.about-list li {
+    color: #ccc;
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.about-list li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #3baeff;
+    font-weight: bold;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #3baeff 0%, #1d6dbd 100%);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(59, 174, 255, 0.2);
+}
+
+.stat-card h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    color: #ddd;
+    font-size: 14px;
+    margin: 0;
+}
+@media (max-width:768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .socials {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .about-section {
+        padding: 50px 8%;
+    }
+
+    .about-section h1 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-text h2 {
+        font-size: 22px;
+    }
+
+    .stat-card h3 {
+        font-size: 28px;
+    }
+}
